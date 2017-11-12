@@ -12,6 +12,9 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var label: WKInterfaceLabel!
+    @IBOutlet var switchWithLabel: WKInterfaceSwitch!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -28,4 +31,11 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func switchAction(_ value: Bool) {
+        if (value) {
+            switchWithLabel.setTitle("World");
+        } else {
+            switchWithLabel.setTitle("");
+        }
+    }
 }

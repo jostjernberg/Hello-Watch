@@ -15,8 +15,16 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Hello_Watch_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label width="136" height="52" alignment="left" text="Hello" textAlignment="center" id="Z48-8F-YbI"/>
-                        <switch width="1" alignment="left" value="YES" title="World" id="ew4-FX-g8P"/>
+                        <switch width="1" alignment="left" id="ew4-FX-g8P">
+                            <connections>
+                                <action selector="switchAction:" destination="AgC-eL-Hgc" id="VZX-GR-daB"/>
+                            </connections>
+                        </switch>
                     </items>
+                    <connections>
+                        <outlet property="label" destination="Z48-8F-YbI" id="nxh-09-Elu"/>
+                        <outlet property="switchWithLabel" destination="ew4-FX-g8P" id="EY8-fL-EgY"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="219.69230769230771" y="344.79487179487182"/>
